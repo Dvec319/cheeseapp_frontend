@@ -1,0 +1,40 @@
+// ------------------
+// Variables
+// ------------------
+
+$maincolor: royalblue;
+$contrastcolor: salmon;
+
+@mixin blue-text-salmon-bg {
+    color: $maincolor;
+    background-color: $contrastcolor;
+}
+
+@mixin salmon-text-blue-bg {
+    color: $contrastcolor;
+    background-color: $maincolor;
+}
+
+body {
+    @include blue-text-salmon-bg;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+nav {
+    @include salmon-text-blue-bg;
+    margin: 10px;
+    font-size: 50px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.cheeses, .cheese, .create, .newCheese, .updatedCheese, .deleteCheese {
+    margin: 10px;
+}
